@@ -51,26 +51,3 @@ All processed data and models are made available for download, offering a compre
 * **Three-Dimensional Plotting**: Advanced 3D representations for complex data relationships
 * **Word Clouds**: Key themes and concepts highlighted through word frequency
 * **World Heat Maps**: Geographic trends and distributions made visually accessible
-
-Local Installation
-------------------
-
-### Prerequisites
-
-To run `app.py`, you'll need:
-* [Python 3.11.5](https://www.python.org/downloads/)
-* [OpenAI API Key](https://openai.com/blog/openai-api)
-    * OpenAI: Note that the free quota does not support GPT-4
-    
-### Installation
-1. Install the required packages
-
-```
-pip install -r requirements.txt
-```
-
-2. Run `app.py` on your local machine
-
-```
-streamlit run app.py
-```
