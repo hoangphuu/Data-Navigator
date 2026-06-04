@@ -1,53 +1,120 @@
-# Data Navigator: A Data Analysis AI Agent
+# Data Navigator
 
-**Data Navigator** is a cutting-edge, open-source application powered by Large Language Models (LLMs) designed to revolutionize data analysis. This **Data Analysis Agent** effortlessly automates all the tasks such as data cleaning, preprocessing, and even complex operations like identifying target objects, partitioning test sets, and selecting the best-fit models based on your data. With Streamline Analyst, results visualization and evaluation become seamless.
+## Project Overview
 
-Here's how it simplifies your workflow: just **select your data file**, **pick an analysis mode**, and **hit start**. Streamline Analyst aims to expedite the data analysis process, making it accessible to all, regardless of their expertise in data analysis. It's built to empower users to process data and achieve high-quality visualizations with unparalleled efficiency🚀, and to execute high-performance modeling with the best strategies🔮.
-Current Version Features
-------------------------
-* **Target Variable Identification**: LLMs adeptly pinpoint the target variable
-* **Null Value Management**: Choose from a variety of strategies such as mean, median, mode filling, interpolation, or introducing new categories for handling missing data, all recommended by LLMs
-* **Data Encoding Tactics**: Automated suggestions and completions for the best encoding methods, including one-hot, integer mapping, and label encoding
-* **Dimensionality Reduction with PCA**
-* **Duplicate Entity Resolution**
-* **Data Transformation and Normalization**: Utilize Box-Cox transformation and normalization techniques to improve data distribution and scalability
-* **Balancing Target Variable Entities**: LLM-recommended methods like random over-sampling, SMOTE, and ADASYN help balance data sets, crucial for unbiased model training
-* **Data Set Proportion Adjustment**: LLM determines the proportion of the data set (can also be adjusted manually)
-* **Model Selection and Training**: Based on your data, LLMs recommend and initiate training with the most suitable models
-* **Cluster Number Recommendation**: Leveraging the Elbow Rule and Silhouette Coefficient for optimal cluster numbers, with the flexibility of real-time adjustments
+Data Navigator is a personal data science project developed to simplify the end-to-end machine learning workflow. The goal of this project is to reduce repetitive tasks in data analysis by integrating data preprocessing, model training, evaluation, and visualization into a single application.
 
-All processed data and models are made available for download, offering a comprehensive, user-friendly data analysis toolkit.
+The system allows users to upload a dataset, automatically perform exploratory data analysis, apply preprocessing techniques, train machine learning models, and compare model performance through visual reports.
 
-### Supported Modeling tasks:
+## Objectives
 
-| **Classification Models**        | **Clustering Models**         | **Regression Models**               |
-|----------------------------------|-------------------------------|-------------------------------------|
-| Logistic regression              | K-means clustering            | Linear regression                   |
-| Random forest                    | DBSCAN                        | Ridge regression                    |
-| Support vector machine           | Gaussian mixture model        | Lasso regression                    |
-| Gradient boosting machine        | Hierarchical clustering       | Elastic net regression              |
-| Gaussian Naive Bayes             | Spectral clustering           | Random forest regression            |
-| AdaBoost                         | etc.                          | Gradient boosting regression        |
-| XGBoost                          |                               | etc.                                |
+* Automate common data preparation tasks.
+* Reduce the amount of manual configuration required for machine learning experiments.
+* Provide a unified interface for classification, regression, and clustering problems.
+* Generate visual insights to support model interpretation and decision-making.
 
-### Real-time calculation of model indicators and result visualization:
+## System Workflow
 
-| **Classification Metrics & Plots** | **Clustering Metrics & Plots** | **Regression Metrics & Plots**        |
-|------------------------------------|--------------------------------|---------------------------------------|
-| Model score                        | Silhouette score               | R-squared score                       |
-| Confusion matrix                   | Calinski-Harabasz score        | Mean square error (MSE)               |
-| AUC                                | Davies-Bouldin score           | Root mean square error (RMSE)         |
-| F1 score                           | Cluster scatter plot           | Absolute error (MAE)                  |
-| ROC plot                           | etc.                           | Residual plot                         |
-| etc.                               |                                | Predicted value vs actual value plot  |
-|                                    |                                | Quantile-Quantile plot                |
+1. Upload dataset
+2. Perform data inspection and preprocessing
+3. Handle missing values and categorical features
+4. Apply feature transformation and dimensionality reduction
+5. Split training and testing data
+6. Train machine learning models
+7. Evaluate model performance
+8. Visualize results and export outputs
 
-### Visual Analysis Toolkit:
+## Implemented Features
 
-**Data Navigator** offers an array of intuitive visual tools for enhanced data insight, **without the need for an API Key**:
+### Data Preprocessing
 
-* **Single Attribute Visualization**: Insightful views into individual data aspects
-* **Multi-Attribute Visualization**: Comprehensive analysis of variable interrelations
-* **Three-Dimensional Plotting**: Advanced 3D representations for complex data relationships
-* **Word Clouds**: Key themes and concepts highlighted through word frequency
-* **World Heat Maps**: Geographic trends and distributions made visually accessible
+* Missing value handling
+* Duplicate record removal
+* Feature encoding
+* Data normalization
+* Box-Cox transformation
+* PCA dimensionality reduction
+
+### Machine Learning
+
+#### Classification
+
+* Logistic Regression
+* Random Forest
+* Support Vector Machine
+* Gradient Boosting
+* XGBoost
+* AdaBoost
+* Naive Bayes
+
+#### Regression
+
+* Linear Regression
+* Ridge Regression
+* Lasso Regression
+* Elastic Net
+* Random Forest Regressor
+* Gradient Boosting Regressor
+
+#### Clustering
+
+* K-Means
+* DBSCAN
+* Gaussian Mixture Model
+* Hierarchical Clustering
+* Spectral Clustering
+
+### Model Evaluation
+
+Classification:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* ROC Curve
+* AUC
+
+Regression:
+
+* MAE
+* MSE
+* RMSE
+* R² Score
+* Residual Analysis
+
+Clustering:
+
+* Silhouette Score
+* Davies-Bouldin Index
+* Calinski-Harabasz Score
+
+## Data Visualization
+
+The platform includes several visualization modules:
+
+* Distribution analysis
+* Correlation analysis
+* Feature relationship analysis
+* 3D scatter visualization
+* Word cloud generation
+* Geographic heat maps
+
+## Technologies
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* XGBoost
+* Matplotlib
+* Plotly
+* Streamlit
+
+## Future Improvements
+
+* Time-series forecasting support
+* Automated hyperparameter optimization
+* Model explainability using SHAP
+* Deep learning integration with PyTorch
+* Deployment support for cloud environments
